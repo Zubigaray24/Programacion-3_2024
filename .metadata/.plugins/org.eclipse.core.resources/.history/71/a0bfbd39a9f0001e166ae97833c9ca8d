@@ -1,0 +1,17 @@
+package ej4;
+
+public class NumerosFibonacci {
+
+	public String getNumeroFibonacci(int inicio, int cantidad, int primerNumero, int segundoNumero) {
+		String numeros = "0 1";
+		
+		while(inicio < cantidad-2) {
+			inicio++;
+			int suma = primerNumero + segundoNumero;
+			numeros += " " + suma;
+			getNumeroFibonacci(inicio, cantidad, primerNumero, segundoNumero);
+		}
+		
+		return numeros;
+	}
+}

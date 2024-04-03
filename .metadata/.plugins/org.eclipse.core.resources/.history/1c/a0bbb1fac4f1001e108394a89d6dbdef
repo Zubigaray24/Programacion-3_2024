@@ -1,0 +1,31 @@
+package ej6;
+
+/*
+Implemente un algoritmo de ordenamiento por selección en un arreglo.
+Implemente un algoritmo de ordenamiento por burbujeo en un arreglo.
+● ¿Qué complejidad big-O tienen estos algoritmos?
+*/
+
+public class Ej6 {
+	
+	public boolean valorIgualIndiceBoolean(int [] arr, int pos) {
+
+		if(arr[pos] == pos) {
+			return true;
+		}
+		else {
+			return valorIgualIndiceBoolean(arr, pos+1);
+		}
+	}
+	
+	public String valorIgualIndiceString(int [] arr, int pos) {
+		
+		if(arr[pos] == pos) {
+			return "En la posicion "+ pos + " contiene un valor igual a su indice " + arr[pos];
+		}
+		else {
+			return valorIgualIndiceString(arr, pos+1);
+		}
+	}
+}
+

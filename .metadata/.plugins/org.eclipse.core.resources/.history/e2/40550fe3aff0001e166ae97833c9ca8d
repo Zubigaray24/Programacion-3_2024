@@ -1,0 +1,11 @@
+package ej4;
+
+public class NumerosFibonacci {
+
+	public void getNumeroFibonacci(int cantidad) {
+		
+		int num1 = 0, num2 = 1, suma = 1;
+		
+	}
+}
+

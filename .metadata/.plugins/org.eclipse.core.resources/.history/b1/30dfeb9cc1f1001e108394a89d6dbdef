@@ -1,0 +1,16 @@
+package ej5;
+
+public class Ej5_main {
+	public static void main(String [] Args) {
+		Ej5 a = new Ej5();
+		int serie = 6;
+		
+       /* for (int i = 0; i < serie; i++) {
+        	 
+            System.out.println(a.fibonacciRecursivo(i));
+        }*/
+		
+		a.fibonacciComun(serie);
+		
+	}
+}

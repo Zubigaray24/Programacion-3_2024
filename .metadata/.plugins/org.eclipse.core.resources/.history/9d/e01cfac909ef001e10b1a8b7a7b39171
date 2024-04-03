@@ -1,0 +1,7 @@
+package ej4;
+
+import java.util.Iterator;
+
+public class IteratorLinkedList<T> implements Iterator<E> {
+
+}

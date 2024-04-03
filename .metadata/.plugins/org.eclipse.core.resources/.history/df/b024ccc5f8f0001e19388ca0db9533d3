@@ -1,0 +1,10 @@
+package ej4;
+
+public class Ej4_main {
+	public static void main(String [] Args) {
+		NumerosFibonacci a = new NumerosFibonacci();
+		
+		
+		System.out.println(a.fibonacciRecursivo(6););
+	}
+}

@@ -1,0 +1,16 @@
+package ej1;
+
+/*
+Implemente un algoritmo recursivo que determine si un arreglo de tamaño N está ordenado y
+responda:
+1. ¿Qué complejidad O tiene? (La complejidad en el peor caso)
+2. ¿Trae algún problema hacerlo recursivo? ¿Cuál?
+3. ¿Qué cambiaría si la estructura fuera una lista en lugar de un arreglo?
+*/
+
+public class ArregloOrdenado {
+
+	int[] arreglo = {7, 2, 4, 8, 3, 9, 1, 5, 10, 6};
+	
+	
+}

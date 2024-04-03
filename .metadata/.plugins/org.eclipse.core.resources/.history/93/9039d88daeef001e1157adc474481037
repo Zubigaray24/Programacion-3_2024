@@ -1,0 +1,105 @@
+package ej5;
+
+/*
+Escriba un procedimiento que dadas dos listas construya otra con los elementos comunes,
+suponiendo que: 
+a) Las listas están desordenadas y la lista resultante debe quedar ordenada. 
+b) Las listas están ordenadas y la lista resultante debe mantenerse ordenada.
+
+*/
+
+public class MySimpleLinkedList<T> {
+	
+	private Node<T> first;
+	private int largo = 0;
+	
+	public MySimpleLinkedList() {
+		this.first = null;
+	}
+	
+	public MySimpleLinkedList<T> nuevaListaConElementosComunesEnListasDesordenadas(MySimpleLinkedList<T> lista1, MySimpleLinkedList<T> lista2){
+		MySimpleLinkedList<T> resultado = new MySimpleLinkedList<T>();
+		
+		Node<T> nodoLista1 = lista1.first;
+		Node<T> nodoLista2 = lista2.first;
+		Node<T> nodoRes = resultado.first;
+		
+		while(nodoLista1.getInfo() != null) { 
+			while(nodoLista2.getInfo() != null && nodoLista1.getInfo() != nodoLista2.getInfo()) {
+				if(nodoLista1.getInfo() != nodoLista2.getInfo()) {
+					nodoLista2 = nodoLista2.getNext();
+				}
+				else {
+					if(nodoRes == null) {
+						nodoRes = nodoLista2;
+					}
+					while(nodoLista2 > nodoRes) {
+						nodoRes = nodoRes.getNext();
+					}
+					if(nodoRes.getNext() == null && nodoLista2 >= nodoRes) {
+						nodoRes.setNext(nodoLista2);
+					}	
+				}
+				nodoLista2 = nodoLista2.getNext();
+			}
+		}
+			nodoLista1 = nodoLista1.getNext();
+		}
+		
+		return resultado;
+	}
+	
+	public void insertFront(T info) {
+		Node<T> tmp = new Node<T>(info,null);
+		tmp.setNext(this.first);
+		this.first = tmp;
+		largo++;
+	}
+	
+	public T extractFront() {
+		T resultado = null;
+		
+		if(this.first == null) {
+			System.out.println("La lista esta vacía");
+			T data = null;
+			return data;
+		}
+		resultado = this.first.getInfo();
+		this.first = this.first.getNext();
+
+		return resultado;
+	}
+
+	public boolean isEmpty() {
+		return this.first == null;
+	}
+	
+	public T get(int index) {
+		Node<T> tmp = this.first;
+		int contador = 0;
+		
+		while ((contador < index) && (tmp.getInfo() != null)) {
+			tmp = tmp.getNext();
+		}
+		
+		return tmp.getInfo();
+	}
+	
+	public int size() {
+		return this.largo;
+	}
+	
+	public int indexOf(T data) {
+		int resultado = 0;
+		Node<T> tmp = this.first;
+		while((tmp.getInfo() != data) && (tmp.getInfo() != null)) {
+			resultado++;
+		}
+		return resultado;
+	}
+	
+	@Override
+	public String toString() {
+		return "Lista_vinculada [primero=" + this.first + "]";
+	}
+}

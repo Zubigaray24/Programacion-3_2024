@@ -1,0 +1,11 @@
+package ej3;
+
+public class Ej3_main {
+	public static void main(String [] Args) {
+		ConvertirDecimalABinario a = new ConvertirDecimalABinario();
+		
+		double numero = 2;
+		
+		System.out.println(a.convertirABinario(numero));
+	}
+}

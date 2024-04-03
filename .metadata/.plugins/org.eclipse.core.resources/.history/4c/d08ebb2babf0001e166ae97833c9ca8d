@@ -1,0 +1,19 @@
+package ej4;
+
+public class NumerosFibonacci {
+
+	public String getNumeroFibonacci(int cantidad) {
+		String numeros = "";
+		int i = 0, primerNumero = 0, segundoNumero = 1;
+		
+		if(numeros.length() == 0) {
+			numeros = primerNumero + " " + segundoNumero;
+		}
+		
+		if(i < cantidad) {
+			
+		}
+		
+		return numeros;
+	}
+}

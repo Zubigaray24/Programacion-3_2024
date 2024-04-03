@@ -1,0 +1,9 @@
+package ej4;
+
+public class Ej4_main {
+	public static void main(String [] Args) {
+		NumerosFibonacci a = new NumerosFibonacci();
+		
+		a.getNumeroFibonacci(6, 0, 1);
+	}
+}

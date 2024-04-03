@@ -1,0 +1,21 @@
+package ej2;
+
+public class BuscarElemento {
+	public void main(String [] Args) {
+		int [] arr = {2, 7, 14, 18, 31, 92, 105, 501, 1005, 6597};
+		
+	}
+	
+	public int buscarElemento(int [] arr, int numeroBuscado, int inicio) {
+		if(inicio >= arr.length) {
+			System.out.println("El elemento no se encuentra");
+			return -1;
+		}
+		
+		if(arr[inicio] == numeroBuscado) {
+			return inicio;
+		}
+		
+		return buscarElemento(arr, numeroBuscado, inicio + 1);
+	}
+}

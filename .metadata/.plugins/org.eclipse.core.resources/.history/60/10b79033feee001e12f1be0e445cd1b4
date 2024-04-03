@@ -1,0 +1,71 @@
+package ej3;
+
+/*
+A la implementación de la clase Lista realizada en el ejercicio 1, agregue un método
+int indexOf(T), que reciba un elemento y retorne el índice donde está almacenado ese
+elemento, o -1 si el elemento no existe en la lista.
+*/
+
+public class MySimpleLinkedList<T> {
+	
+	private Node<T> first;
+	private int largo = 0;
+	
+	public MySimpleLinkedList() {
+		this.first = null;
+	}
+	
+	public void insertFront(T info) {
+		Node<T> tmp = new Node<T>(info,null);
+		tmp.setNext(this.first);
+		this.first = tmp;
+		largo++;
+	}
+	
+	public T extractFront() {
+		T resultado = null;
+		
+		if(this.first == null) {
+			System.out.println("La lista esta vacía");
+			T data = null;
+			return data;
+		}
+		resultado = this.first.getInfo();
+		this.first = this.first.getNext();
+
+		return resultado;
+	}
+
+	public boolean isEmpty() {
+		return this.first == null;
+	}
+	
+	public T get(int index) {
+		Node<T> tmp = this.first;
+		int contador = 0;
+		
+		while ((contador < index) && (tmp.getInfo() != null)) {
+			tmp = tmp.getNext();
+		}
+		
+		return tmp.getInfo();
+	}
+	
+	public int size() {
+		return this.largo;
+	}
+	
+	public int indexOf(T data) {
+		int resultado = 0;
+		Node<T> tmp = this.first;
+		while(tmp.getInfo() != data) {
+			resultado++;
+		}
+		return 1;
+	}
+	
+	@Override
+	public String toString() {
+		return "Lista_vinculada [primero=" + this.first + "]";
+	}
+}

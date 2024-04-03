@@ -1,0 +1,7 @@
+package ej1;
+
+public class Main {
+	public void main(String [] Args) {
+		ArregloOrdenado [] arr = {2, 7, 4, 8, 3, 9, 1, 5, 10, 6};
+	}
+}

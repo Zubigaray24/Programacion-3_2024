@@ -1,0 +1,21 @@
+package ej3;
+
+/*
+Implemente un algoritmo recursivo que convierta un número en notación decimal a su
+equivalente en notación binaria.
+*/
+
+public class ConvertirDecimalABinario {
+
+	public String convertirABinario(int numero){
+		String binario = " ";
+		
+		while(numero != 1) {
+			binario += numero % 2;
+			numero = (int) Math.floor((numero / 2));
+			convertirABinario(numero);
+		}
+		
+		return binario;
+	}
+}

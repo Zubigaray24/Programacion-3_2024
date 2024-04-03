@@ -1,0 +1,25 @@
+package ej4;
+
+public class NumerosFibonacci {
+
+	public void getNumeroFibonacci(int inicio, int cantidad, int primerNumero, int segundoNumero) {
+		
+		if(inicio == 0) {
+			System.out.println(primerNumero);
+			inicio++;
+		}
+		
+		if(inicio == 1) {
+			System.out.println(segundoNumero);
+			inicio++;
+		}
+		
+		while(inicio < cantidad) {
+			int suma = primerNumero + segundoNumero;
+			System.out.println(suma);
+			getNumeroFibonacci(inicio + 1, suma, primerNumero, segundoNumero);
+		}
+		
+	}
+}
+
